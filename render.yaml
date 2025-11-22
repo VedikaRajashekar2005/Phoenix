@@ -1,0 +1,46 @@
+services:
+  - type: web
+    name: htil-backend
+    env: python
+    buildCommand: "pip install -r htil/backend/requirements.txt"
+    startCommand: "bash htil/backend/start.sh"
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    autoDeploy: true
+    repo: VedikaRajashekar2005/Phoenix
+    branch: master
+    rootDir: htil/backend
+
+  - type: web
+    name: htil-frontend
+    env: node
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    autoDeploy: true
+    repo: VedikaRajashekar2005/Phoenix
+    branch: master
+    rootDir: htil/frontend
+
+  - type: web
+    name: prediction-backend
+    env: python
+    buildCommand: "pip install -r htil/backend/requirements.txt"
+    startCommand: "bash prediction/backend/start.sh"
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    autoDeploy: true
+    repo: VedikaRajashekar2005/Phoenix
+    branch: master
+    rootDir: prediction/backend
+
+  - type: web
+    name: prediction-frontend
+    env: node
+    buildCommand: "npm install"
+    startCommand: "npm run dev"
+    autoDeploy: true
+    repo: VedikaRajashekar2005/Phoenix
+    branch: master
+    rootDir: prediction/frontend
