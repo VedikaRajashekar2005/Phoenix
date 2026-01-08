@@ -7,3 +7,5 @@ xgboost
 python-dotenv
 gunicorn
 scikit-learn
+scapy
+psutil
