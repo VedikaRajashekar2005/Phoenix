@@ -1,4 +1,4 @@
-# Phoenix
+# AI FIREWALL
 
 Phoenix is a project focused on DDoS detection, continuous learning, and human review workflows. It includes backend machine learning models, frontend web applications, and datasets for training and prediction.
 
